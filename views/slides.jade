@@ -1,0 +1,281 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Introdução à Agilidade com Práticas Ágeis
+    meta(name='description', content='A framework for easily creating beautiful presentations using HTML')
+    meta(name='author', content='Hakim El Hattab')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
+    link(rel='stylesheet', href='css/reveal.css')
+    link#theme(rel='stylesheet', href='css/theme/black.css')
+    // Code syntax highlighting
+    link(rel='stylesheet', href='lib/css/zenburn.css')
+    // Printing and PDF exports
+    link(rel='stylesheet', href='fa/css/font-awesome.css')
+    //link(type="text/css", rel="stylesheet", href="css/styles.css")
+
+    script.
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    //if lt IE 9
+    script(src='lib/js/html5shiv.js')
+
+  body
+
+    .reveal
+      // Any section element inside of this container is displayed as a slide
+      .slides
+        section
+          h1 Introdução à<br/>Agilidade na raça
+          p
+            a(href='http://twitter.com/alanbraz', target="_blank") 
+              i.fa.fa-twitter
+              | @alanbraz
+          small
+            a(href="https://github.com/alanbraz/agile-intro-inf330-2016", target="_blank")    
+              i.fa.fa-github 
+              |  github.com/alanbraz/agile-intro-inf330-2016
+          br
+          small
+            a(href="http://agile-intro-inf330-2016.mybluemix.net", target="_blank")  
+              i.fa.fa-tv
+              |  agile-intro-inf330-2016.mybluemix.net
+          br
+          small #[i.fa.fa-map-marker] IC - Unicamp &nbsp;
+          small #[i.fa.fa-calendar] 19 de Março de 2016
+          br
+          small Referências: 
+            a(href="http://www.alanbraz.com.br/agile", target="_blank")  
+              i.fa.fa-external-link
+              |  www.alanbraz.com.br/agile
+
+        //section(data-background="images/manifesto.png", style="padding: 20px;")
+
+        section
+          a(href="http://manifestoagil.com.br/", target="_blank")
+            img(src="images/manifesto.png")
+            br
+            br
+            small
+              i.fa.fa-external-link
+              |  manifestoagil.com.br
+
+        section
+          h3 Começando uma apresentação ágil
+          ul
+            li.fragment Visão 
+              span.fragment.highlight-blue Montar uma apresentação no estilo do Manifesto Ágil através de exemplos
+            li.fragment Clientes e usuários 
+              span.fragment.highlight-blue parcipantes/alunos = vcs!
+            li.fragment Coach / facilitador 
+              span.fragment.highlight-blue eu?!
+            li.fragment Prazo fixo 
+              span.fragment.highlight-blue ~1 hora!
+            li.fragment Escopo  
+              span.fragment.highlight-blue aberto: práticas ágeis
+            li.fragment Equipe de desenvolvimento 
+              span.fragment.highlight-blue 3 pessoas diferentes por rodada
+            li.fragment Tecnologia 
+              span.fragment.highlight-blue Slides com #[a(href="http://lab.hakim.se/reveal-js",target="_blank") reveal-js] em #[a(href="http://jade-lang.com/",target="_blank") jade] rodando em #[a(href="http://nodejs.org/",target="_blank") Node.js]
+            li.fragment Ferramentas 
+              span.fragment.highlight-blue 
+                a(href="http://github.com/", target="_blank") Github
+                | , 
+                a(href="http://hub.jazz.net/", target="_blank") IBM DevOps
+                | , 
+                a(href="http://bluemix.net/", target="_blank") IBM Bluemix
+            li.fragment Processo iterativo e incremental 
+              span.fragment.highlight-blue Scrum?!
+
+        section
+          h3 Processo "Brazcrum"
+          p Uma rodada consiste em...
+          table
+            thead
+              tr
+                th Atividade
+                th Minutos
+            tbody
+              tr
+                td Definir tema
+                td 1
+              tr
+                td Desenvolver
+                td 5
+              tr
+                td Apresentar
+                td 1
+              tr
+                td Complementar
+                td 1
+          p.fragment + Restrospectiva de ~10 minutos após as N rodadas
+          p.fragment Estimativa: 
+            span.fragment.highlight-blue quantos temas vamos conseguir apresentar?
+
+        section
+          section
+            h1 Definição de pronto!
+
+            h3 Produzir um slide, #[br]conforme exemplos, #[br]a cada rodada, #[br]e colocá-lo no ar!
+
+          section
+            p Tema: sistema puxado, sob-demanda
+            div(style="float: left; width: 45%")
+              img.photo-left(width='100%', height='100%', data-src='images/uber_taxi.jpg')
+            div(style="float: left; width: 10%")
+              p + ágil que
+            div(style="float: left; width: 45%")
+              img.photo-right(width='100%', height='100%', data-src='images/taxis.jpg')
+            div(style="clear: both;")
+              small Equipe: Alan, Gabriela
+
+          section
+            p Tema: tempo fixo, escopo fechado
+            div(style="float: left; width: 45%")
+              img.photo-left(width='100%', height='100%', data-src='images/crossfit.jpg')
+            div(style="float: left; width: 10%")
+              p + ágil que
+            div(style="float: left; width: 45%")
+              img.photo-right(width='100%', height='100%', data-src='images/ficha.jpg')
+            div(style="clear: both;")
+              small Equipe: Alan, Gabriela
+
+        section
+          h2 Backlog de possíveis temas
+          div(style="float: left; width: 50%")
+            ul 
+              li Planejamento
+              li Estimativas
+              li Programação em par
+              li Reunião diária
+              li TDD
+              li Requisitos
+              li Product Backlog
+              li Gestão de projetos
+              li Contratos
+              li Integração Contínua
+              li ...
+          div(style="float: left; width: 50%")
+            ul 
+              li Scrum
+              li XP
+              li Kanban
+              li Equipes auto-organizadas
+              li Ferramentas
+              li DevOps
+              li Valores do Manifesto Ágil
+              li Princípios do Manifesto Ágil
+              li Inibidores / Críticas
+              li Tamanho de projeto
+              li ...
+
+        // comece aqui     
+
+        section
+
+          section
+            h1 Rodadas ao vivo 
+            
+          section
+            p Tema: [colocar tema aqui]
+              div(style="float: left; width: 45%")
+                img.photo-left(width='100%', height='100%', data-src='http://static.sportskeeda.com/wp-content/uploads/2014/02/schumacher-sss-2111076.jpg')
+              div(style="float: left; width: 10%")
+                p + ágil que
+              div(style="float: left; width: 45%")
+                img.photo-right(width='100%', height='100%', data-src='https://primeiracarta.files.wordpress.com/2008/11/rubens-barrichello-12.jpg')
+              div(style="clear: both;")
+                small Equipe: [nome aluno], [nome aluno], [nome aluno]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // **************************************************************  
+        // NÃO ALTERAR À PARTIR DAQUI DURANTE A AULA
+        // **************************************************************  
+        section
+          h2 Restrospectiva
+          p.fragment Práticas utilizadas durante essa apresentação?
+          p.fragment Esta apresentação foi realmente ágil?
+
+        section
+          h2 Apresentações anteriores
+          div(style="float: left; width: 50%")
+            ul
+              li #[a(href="http://caipiraagil.com", target="_blank") CaipiraÁgil] abertura em 30 minutos
+                br
+                small
+                  a(href="http://manifesto-caipira.mybluemix.net", target="_blank")  
+                    i.fa.fa-tv
+                    |  manifesto-caipira.mybluemix.net
+              li Aula UNICAMP em 2 horas
+                br
+                small
+                  a(href="http://agile-intro-ic2s2015.mybluemix.net", target="_blank")  
+                    i.fa.fa-tv
+                    |  agile-intro-ic2s2015.mybluemix.net
+              li Aula Semana de Computação FAJ em 2.5 horas
+                br
+                small
+                  a(href="http://agile-intro-faj2015.mybluemix.net", target="_blank")  
+                    i.fa.fa-tv
+                    |  agile-intro-faj2015.mybluemix.net
+                    
+          div(style="float: left; width: 50%")
+            iframe(width="420",height="315",src="https://www.youtube.com/embed/z_j0SSLkoKU",frameborder="0" allowfullscreen)
+          div(style="clear: both;") 
+            a(href="https://twitter.com/intent/tweet?screen_name=alanbraz&text=%23agile" target="_blank")
+              i.fa.fa-twitter 
+              |  Deixe um comentário!
+
+
+
+    script(src='lib/js/head.min.js')
+    script(src='js/reveal.js')
+
+    script.
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
