@@ -1,5 +1,5 @@
 {
-  "name": "agile-intro-inf330-2016",
+  "name": "agile-intro-soa3839",
   "version": "0.0.1",
   "description": "nodejs app for Bluemix",
   "scripts": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alanbraz/agile-intro-inf330-2016.git"
+    "url": "https://github.com/alanbraz/agile-intro-soa3839.git"
   },
   "author": {
     "name": "Alan Braz",
